@@ -1,0 +1,13 @@
+
+
+
+
+<config>
+    <db>
+        <uri>mongodb://localhost:27017</uri>
+        <dbname>Progetto</dbname>
+    </db>
+    <server>
+        <port>3214</port>
+    </server>
+</config>
