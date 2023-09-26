@@ -14,10 +14,10 @@ public class Server {
         Element Root = Parser.getDOMParsedDocumentRoot();
         Element Server = (Element) Root.getElementsByTagName("server").item(0);
         int Port = Integer.parseInt(Server.getElementsByTagName("port").item(0).getTextContent());
+        ServerSocket ServerSocket = new ServerSocket(Port);
         Element DB = (Element) Root.getElementsByTagName("db").item(0);
         String Uri = DB.getElementsByTagName("uri").item(0).getTextContent();
         String DName = DB.getElementsByTagName("dbname").item(0).getTextContent();
-        ServerSocket ServerSocket = new ServerSocket(Port);
         DatabaseManager DM = new DatabaseManager(Uri, DName);
 
 
